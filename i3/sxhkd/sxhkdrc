@@ -1,0 +1,107 @@
+super + Escape
+    pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
+
+super + Return
+   kitty
+
+#Rofi & dmenu
+
+super + space
+   	rofi -modi drun -show drun -line padding 4 -hide-scrollbar -show-icons
+   	
+super + p
+    dmenu_run -nb '#1e1e1e' -sf '#1e1e1e' -sb '#f4800d' -nf '#F4800d'
+
+super + shift + q
+     i3-msg exit
+
+super + r
+   kitty -e "ranger"
+   
+super + t
+   thunar 
+
+super + e
+  kitty -e nvim	
+	
+alt + p
+  rofi -show
+
+# Application Keybindings
+
+super + b
+    firefox-esr
+
+super + d 
+    kitty -e snap run discord
+
+ctrl + alt + s
+    flameshot gui
+
+#Audio Keybindings
+
+super + alt + Up
+        amixer -c 1 -- sset Master 2db+
+
+super + alt + Down
+        amixer -c 1 -- sset Master 2db-
+
+super + alt + x
+        amixer -c 1 -- sset Master toggle
+
+alt + {h,j,k,l}
+   mpc {prev,next,play,pause}
+
+#i3 Specific Keybindings
+
+super + {v,b}
+    i3-msg split {v,h}
+
+super + f
+    i3-msg fullscreen toggle
+
+super + shift + space
+    i3-msg floating toggle
+
+super + control + space
+    i3-msg focus mode_toggle
+
+super + alt + a
+    i3-msg focus parent
+
+#workspaces
+
+super + {1-9,0}
+    i3-msg workspace {1-9,10}
+
+super + shift+{1-9,0}
+    i3-msg move container to workspace number {1-9,10}
+    
+#movement
+
+super+{h,j,k,l}
+    i3-msg focus {left,down,up,right}
+
+super+shift+{h,j,k,l}
+    i3-msg move {left,down,up,right}
+    
+super+{Left,Down,Up,Right}
+    i3-msg focus {left,down,up,right}
+    
+super+shift+{Left,Down,Up,Right}
+    i3-msg move {left,down,up,right}
+
+#other bindings
+
+super + q
+    i3-msg kill
+
+super + alt + c
+    i3-msg reload
+
+super + alt + r
+    i3-msg restart; notify-send 'i3-gaps' 'Restarted'
+
+super + ctrl + {Left,Down,Up,Right}
+    i3-msg resize {grow width 1 px or 1 ppt, shrink height 1 px or 1 ppt, grow height 1 px or 1 ppt, shrink width 1 px or 1 ppt}
+

@@ -1,0 +1,61 @@
+include $HOME/.config/i3/workspaces.conf
+set $mod Mod4
+font pango:monospace 8
+
+exec_always --no-startup-id ~/.config/i3/autostart.sh
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+new_window 1pixel
+gaps inner 8
+gaps outer 6
+
+# client.focused          #b8bb26 #b8bb26 #ffffff #b8bb26   #b8bb26
+client.focused          #98971a #98971a #ffffff #98971a   #98971a
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+
+set $bg #282828
+set $red #cc241d
+set $green #98972a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+
+bar {
+    position top 
+      height 			20
+      font 			pango: ohsnap, awesome 13
+      separator_symbol 	"::"
+    status_command i3blocks
+    colors {
+        background $bg
+        statusline $yellow
+        separator  #801311
+        # workspaces section            
+        #                    border  backgr. text
+        focused_workspace    $gray $gray $darkgray
+        inactive_workspace   $darkgray $darkgray $yellow
+        active_workspace     $darkgray $darkgray $yellow
+        urgent_workspace     $red $red $bg
+    }
+}
+
+bindsym $mod+o workspace next
+bindsym $mod+i workspace prev
+
+# Gaps settings
+bindsym $mod+Shift+plus exec \
+  i3-msg "gaps outer current plus 5" && \
+  i3-msg "gaps inner current plus 5"
+
+bindsym $mod+Shift+minus exec \
+  i3-msg "gaps outer current minus 5" && \
+r i3-msg "gaps inner current minus 5"
+
+# bindsym $mod+Shift+space floating toggle; [tiling con_id=__focused__] border none; [floating con_id=__focused__] border normal
+for_window [floating_from="user"] border pixel 6 
