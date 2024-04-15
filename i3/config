@@ -48,6 +48,9 @@ bar {
 bindsym $mod+o workspace next
 bindsym $mod+i workspace prev
 
+bindsym $mod+mod1+Up exec amixer -q sset Master 2%+
+bindsym $mod+mod1+Down exec amixer -q sset Master 2%-
+
 # Gaps settings
 bindsym $mod+Shift+plus exec \
   i3-msg "gaps outer current plus 5" && \
@@ -59,3 +62,4 @@ r i3-msg "gaps inner current minus 5"
 
 # bindsym $mod+Shift+space floating toggle; [tiling con_id=__focused__] border none; [floating con_id=__focused__] border normal
 for_window [floating_from="user"] border pixel 6 
+
