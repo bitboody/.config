@@ -62,7 +62,3 @@ r i3-msg "gaps inner current minus 5"
 
 # bindsym $mod+Shift+space floating toggle; [tiling con_id=__focused__] border none; [floating con_id=__focused__] border normal
 for_window [floating_from="user"] border pixel 6 
-
-# Language
-exec setxkbmap -layout us,ar
-exec setxkbmap -option 'grp:alt_shift_toggle'
