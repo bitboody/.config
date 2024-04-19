@@ -8,6 +8,7 @@
 ; (gtk_accel_path "<Actions>/ThunarStatusBar/toggle-last-modified" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/invert-selection" "")
 ; (gtk_accel_path "<Actions>/ThunarStatusBar/toggle-display-name" "")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/08b0852219b0a03e29dfbce2ca4c75ea" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/cut" "<Primary>x")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/restore-show" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/zoom-in" "<Primary>KP_Add")
