@@ -29,7 +29,7 @@ set $darkgray #1d2021
 bar {
     position top 
       height 			20
-      font 			pango: ohsnap, awesome 16
+      font 			pango: ohsnap, awesome 18
       separator_symbol 	"::"
     status_command i3blocks
     colors {
