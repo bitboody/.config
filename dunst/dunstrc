@@ -1,5 +1,5 @@
 [global]
-   font = Iosevka Term Medium 16
+   font = Iosevka Term Medium 12
   
     
     # Allow a small subset of html markup:
@@ -149,7 +149,7 @@
     icon_folders = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/
 
 [frame]
-    width = 2
+    width = r
     color = "#32302f"
 
 [shortcuts]
