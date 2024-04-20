@@ -10,7 +10,7 @@ super + space
    	rofi -modi drun -show drun -line padding 4 -hide-scrollbar -show-icons
    	
 super + p
-    dmenu_run -nb '#1e1e1e' -sf '#1e1e1e' -sb '#f4800d' -nf '#F4800d'
+    dmenu_run -nb '#1e1e1e' -sf '#1e1e1e' -sb '#f4800d' -nf '#F4800d' -fn "FiraCode-15"
 
 super + shift + q
      i3-msg exit
